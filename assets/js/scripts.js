@@ -48,7 +48,7 @@ $(document).ready(function() {
     TC.start();
 
     // Infopanel clickable view
-    $('p').on("click", function (e) {
+    $('span').on("click", function (e) {
         if (this.previousElementSibling.style.width == "fit-content"){
             this.style.transform="rotate(-45deg)";
             this.previousElementSibling.style.width="0rem";
@@ -98,7 +98,7 @@ class TypeControl {
             setTimeout(this.typeDel.bind(this), this.speed);
 
         } else if (this.i < this.txt[this.j].length & this.t == 0) {
-            beep();
+            // beep();
             this.id.innerHTML += this.txt[this.j].charAt(this.i).replace(";", "<br>").replace("~", "<div id='timedate'></div>");
             this.i++;
             setTimeout(this.typeWriter.bind(this), this.speed);

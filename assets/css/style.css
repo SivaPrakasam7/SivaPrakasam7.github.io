@@ -422,10 +422,6 @@ body {
 }
 
 .show p {
-    margin: -1rem;
-    margin-top: 2rem;
-    margin-right: -6rem;
-    display: none;
     height: fit-content;
     padding: 0.5rem;
     border-radius: 0.3rem;
@@ -441,10 +437,6 @@ body {
 
 .icon:hover path {
     fill: var(--mcolor);
-}
-
-.show:hover p {
-    display: block;
 }
 
 .buble:hover {

@@ -422,6 +422,7 @@ body {
 }
 
 .show p {
+    margin-left: -0.5rem;
     height: fit-content;
     padding: 0.5rem;
     border-radius: 0.3rem;

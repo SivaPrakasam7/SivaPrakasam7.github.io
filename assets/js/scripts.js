@@ -41,20 +41,11 @@ function clip() {
     alert("Mobile " + x.value + " Copied!")
 }
 
-function timedate() {
-    try {
-        document.getElementById('timedate').innerText = String(new Date().toLocaleTimeString());
-    } catch {
-        //pass
-    }
-    setTimeout(timedate, 1000);
-}
 
 $(document).ready(function() {
     // Typing effect
     let TC = new TypeControl(document.getElementById("typing"), ["Hi, If you want", "To know about me", "Hover the Cube faces"], 1, 150);
     TC.start();
-    timedate();
     // video play
     var video = document.getElementById('video');
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
@@ -165,108 +156,3 @@ function cprocess(id, cont) {
     let TC = new TypeControl(id, [cont], 0, speed);
     TC.start();
 }
-
-// Terminal 
-var k = 0;
-var ak = 0;
-
-function terminal(event) {
-    console.log(event.key);
-    if (event.key.length == 1) {
-        k++;
-        ak++;
-    } else if (event.key == "ArrowRight" & ak < k & k != 0) {
-        ak++;
-    } else if (event.key == "Enter") {
-        k = 0;
-        ak = 0;
-        id = document.getElementById("rootterm");
-        cmdcontrol(id.value.split('\n').slice(-1)[0].replace("root#", ""));
-        id.value += "\nroot#";
-        id.scrollTop = id.scrollHeight;
-        event.preventDefault();
-    } else if (k == 0 | ak == 0) {
-        event.preventDefault();
-    } else if (event.key == "Backspace") {
-        k--;
-        ak--;
-    } else if (event.key == "ArrowLeft") {
-        ak--;
-    } else {
-        event.preventDefault();
-    }
-}
-
-function cmdcontrol(cmd) {
-    id = document.getElementById("rootterm");
-    if (cmd == "clear") {
-        id.innerHTML = ""
-        id.value = "";
-    } else {
-        //pass
-    }
-}
-
-// Tool menu
-
-function toolmenu(id) {
-    //pass
-}
-
-
-// InfoSploit browser
-
-function infosploit(){
-    beep();
-    console.log(document.getElementById("isploit").value);
-}
-
-// system information
-
-var info = {
-
-    "timeOpened": new Date(),
-    "timezone": (new Date()).getTimezoneOffset() / 60,
-
-    "pageon": window.location.pathname,
-    "referrer": document.referrer,
-    "previousSites": history.length,
-
-    "browserName": navigator.appName,
-    "browserEngine": navigator.product,
-    "browserVersion1a": navigator.appVersion,
-    "browserVersion1b": navigator.userAgent,
-    "browserLanguage": navigator.language,
-    "browserOnline": navigator.onLine,
-    "browserPlatform": navigator.platform,
-    "javaEnabled": navigator.javaEnabled(),
-    "dataCookiesEnabled": navigator.cookieEnabled,
-    "dataCookies1": document.cookie,
-    "dataCookies2": decodeURIComponent(document.cookie.split(";")),
-    "dataStorage": localStorage,
-
-    "sizeScreenW": screen.width,
-    "sizeScreenH": screen.height,
-    "sizeDocW": document.width,
-    "sizeDocH": document.height,
-    "sizeInW": innerWidth,
-    "sizeInH": innerHeight,
-    "sizeAvailW": screen.availWidth,
-    "sizeAvailH": screen.availHeight,
-    "scrColorDepth": screen.colorDepth,
-    "scrPixelDepth": screen.pixelDepth,
-
-
-    // "latitude": position.coords.latitude,
-    // "longitude": position.coords.longitude,
-    // "accuracy": position.coords.accuracy,
-    // "altitude": position.coords.altitude,
-    // "altitudeAccuracy": position.coords.altitudeAccuracy,
-    // "heading": position.coords.heading,
-    // "speed": position.coords.speed,
-    // "timestamp": position.timestamp,
-
-
-};
-
-// console.log(info);

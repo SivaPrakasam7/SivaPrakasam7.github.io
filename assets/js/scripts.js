@@ -46,18 +46,6 @@ $(document).ready(function() {
     // Typing effect
     let TC = new TypeControl(document.getElementById("typing"), ["Hi, If you want", "To know about me", "Hover the Cube faces"], 1, 150);
     TC.start();
-    // video play
-    var video = document.getElementById('video');
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({
-            audio: true,
-            video: true
-        }).then(function(stream) {
-            // video.src = window.URL.c/reateObjectURL(stream);
-            video.srcObject = stream;
-            video.play();
-        });
-    }
 
     // Infopanel clickable view
     $('p').on("click", function (e) {

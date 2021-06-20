@@ -1,7 +1,7 @@
-var spn = 0
-
+var spn = 0;
+var typed = 0;
 function clickspin() {
-    document.getElementsByClassName("cube")[0].style.animation="none";
+    document.getElementsByClassName("cube")[0].style.animation = "none";
     ids = ["cube-right", "cube-front", "cube-left", "cube-back", "cube-bottom", "cube-top"]
     spin = ["translate(-50%, -50%) rotateY(-90deg)", "translate(-50%, -50%) rotateY(0deg)", "translate(-50%, -50%) rotateY(90deg)", "translate(-50%, -50%) rotateY(180deg)", "translate(-50%, -50%) rotateY(360deg) rotateX(90deg)", "translate(-50%, -50%) rotateY(360deg) rotateX(-90deg)"];
     for (var i = 0; i < ids.length; i++) {
@@ -13,7 +13,8 @@ function clickspin() {
     }
     if (spn == 6) {
         spn = 0;
-        document.getElementsByClassName("cube")[0].style.animation="";
+        typed = 1;
+        document.getElementsByClassName("cube")[0].style.animation = "";
     } else { spn++; }
 }
 
@@ -23,7 +24,7 @@ function panelhide(id) {
     id.childNodes[1].style.opacity = "0";
 }
 
-function panelshow(id,spns) {
+function panelshow(id, spns) {
     tprocess(id);
     id.parentNode.style.transform = spns;
     if (window.screen.width <= 426) {
@@ -144,23 +145,22 @@ class TypeControl {
 }
 
 function tprocess(id) {
-    try {
-        id.onmouseover = function () { return false; }
-    } catch {
-        //pass
-    }
-    try {
-        for (var i = 0; i < id.childNodes.length; i++) {
-            if (id.childNodes[i].nodeName == "#text") {
-                cont = id.childNodes[i].textContent.trim();
-                if (cont != "") {
-                    cprocess(id, cont);
+    if (typed == 1) {
+        return false;
+    } else {
+        try {
+            for (var i = 0; i < id.childNodes.length; i++) {
+                if (id.childNodes[i].nodeName == "#text") {
+                    cont = id.childNodes[i].textContent.trim();
+                    if (cont != "") {
+                        cprocess(id, cont);
+                    }
                 }
+                tprocess(id.childNodes[i]);
             }
-            tprocess(id.childNodes[i]);
+        } catch {
+            //pass
         }
-    } catch {
-        //pass
     }
 }
 

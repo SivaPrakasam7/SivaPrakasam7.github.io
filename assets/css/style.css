@@ -676,11 +676,6 @@ td,th {
         width: calc(var(--size)*1.5);
         height: calc(var(--size)*1.5);
     }
-    .cube-face:hover .panel {
-        opacity: 1 !important;
-        width: 80vw !important;
-        height: 70vh !important;
-    }
     .lskill-set{
         width: 95%;
     }

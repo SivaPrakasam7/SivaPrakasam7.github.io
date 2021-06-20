@@ -4,6 +4,7 @@
     --mpcolor: #4edb3950;
     --icolor: #4edb3990;
     --mocolor: #4edb3908;
+    --panel:rgb(4, 7, 3);
 }
 
 body {
@@ -33,16 +34,15 @@ body {
     color: var(--mcolor);
     font-weight: bolder;
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 0%);
     transition: 0.5s;
     z-index: 15;
-    animation: blink 3s infinite;
+    /* animation: blink 3s infinite; */
 }
 
 .btn:hover {
-    animation-play-state: paused;
-    opacity: 0;
     box-shadow: 0px 0px 0.5rem 0px var(--mcolor);
 }
 
@@ -67,12 +67,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transform-style: preserve-3d;
-    animation: spin 20s infinite linear;
+    animation: spin 10s infinite linear;
+    transition: 0.8s;
     z-index: 15;
-}
-
-.cube:hover {
-    animation-play-state: paused;
 }
 
 @keyframes spin {
@@ -160,6 +157,7 @@ body {
 /* View panel */
 
 .panel {
+    display: flex;
     opacity: 0;
     position: absolute;
     top: 50%;
@@ -186,11 +184,11 @@ body {
     }
 }
 
-.cube-face:hover .panel {
+/* .cube-face:hover .panel {
     opacity: 1 !important;
     width: 60vw !important;
     height: 60vh !important;
-}
+} */
 
 .info1 {
     position: absolute;
@@ -226,11 +224,19 @@ body {
     background: var(--mocolor);
     border-radius: 1rem;
     box-shadow: 0px 0px 0.5rem 0px var(--mcolor);
-    padding: 0.1rem;
+    height: 0.1rem;
+    width: 0.1rem;
     border: 0.3rem solid var(--mocolor);
     cursor: pointer;
     z-index: 50;
     transition: 1s;
+    animation: shade 2s infinite;
+}
+
+.lock p{
+    margin-left: -2.5rem;
+    color: black;
+    font-weight: bold;
 }
 
 .ninfo2,
@@ -253,6 +259,13 @@ body {
     text-align: right;
     overflow: hidden;
     z-index: 50;
+}
+
+.info2 p{
+    font-weight: bold;
+    position: absolute;
+    margin-top: 2.5rem;
+    margin-left: -5.5rem;
 }
 
 .info3 {
@@ -285,7 +298,7 @@ body {
 
 .object {
     width: 90%;
-    height: 90%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -397,12 +410,13 @@ body {
     transform: scale(0.9);
     transition: 0.5s;
 }
-
+.icon1,
 .icon {
     width: 2rem;
     height: 2rem;
     float: left;
     margin: 0.5rem;
+    /* animation: panim 10s infinite; */
 }
 
 .fold {
@@ -426,8 +440,18 @@ body {
     height: fit-content;
     padding: 0.5rem;
     border-radius: 0.3rem;
-    box-shadow: 0px 0px 0.2rem 0px var(--mcolor) inset;
+    /* box-shadow: 0px 0px 0.2rem 0px var(--mcolor) inset; */
     width: fit-content;
+}
+
+.icont{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.icont a{
+    margin: 0;
 }
 
 .bubble svg path,
@@ -504,16 +528,17 @@ h4{
 .infoanim{
     position:absolute;
     display:flex;
-    bottom: 4rem;
+    top:50%;
+    transform: translate(0%,-50%);
 }
 
 .infobox{
     width:0rem;
-    height:15rem;
+    height:fit-content;
     overflow:auto;
     border-radius:0.3rem;
-    box-shadow: 0px 0px 0.5rem 0px #4edb3950 inset;
-    background:var(--mpcolor);
+    box-shadow: 0px 0px 0.5rem 0px #4edb39 inset;
+    background: var(--panel);
 }
 table {
     display: none;
@@ -539,15 +564,38 @@ td,th {
 }
 .arrowbox{
     border: solid var(--mcolor);
-    border-width: 0 3px 3px 0;
+    border-width: 0 5px 5px 0;
+    border-radius: 0.2rem;
     display: inline-block;
-    padding: 3px;
+    height: 0.4rem;
+    width: 0.4rem;
     position:relative;
     transform: rotate(-45deg);
     left:0.5rem;
     cursor: pointer;
     z-index: 10;
+    transition: 0.3s;
+    margin-right: 1rem;
+    animation: shade 2s infinite;
 }
+
+.arrowbox p{
+    transform: rotate(45deg);
+    margin-top: -0.5rem;
+    color: black;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+@keyframes shade {
+    from{
+        box-shadow: 0px 0px 0rem 0rem #4edb39;
+    }
+    to{
+        box-shadow: 0px 0px 5rem 0.8rem #4edb39;
+    }
+}
+
 ::-webkit-scrollbar{
     width:0.2rem;
     height:0.2rem;
@@ -559,6 +607,37 @@ td,th {
     background:#4edb3950;
     border-radius:0.3rem;
 }
+
+/* Skill Show */
+
+.lskill-set{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.slogo{
+    height: 2rem;
+    width: 2rem;
+    float: left;
+}
+.percont{
+    font-size: small;
+    width: 90%;
+}
+.lskill-per{
+    box-shadow: 0px 0px 0.5rem 0px #4edb39 inset;
+    overflow: hidden;
+    float:left;
+    height: 0.5rem;
+    width: 100%;
+    border-radius: 0.3rem;
+}
+.score{
+    background: var(--mcolor);
+    height: 100%;
+    float: left;
+}
+
 
 /* IPAD */
 
@@ -601,5 +680,8 @@ td,th {
         opacity: 1 !important;
         width: 80vw !important;
         height: 70vh !important;
+    }
+    .lskill-set{
+        width: 95%;
     }
 }

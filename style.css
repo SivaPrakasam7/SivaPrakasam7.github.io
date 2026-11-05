@@ -1,8 +1,8 @@
 /* Hallmark · shape: Workbench · genre: modern-minimal · theme: Ultraviolet (deal 3/3, seed personal-portfolio-freelance-web-7e9f·c7c4e0d0·2026-11-05·r0) · redesign: full
- * hero: Stage · nav: edge-aligned, wordmark + links + resume pill · footer: a mast, name over the links · imagery: the owner's portrait, tinted violet · signature: the figures count up and the experience spine draws as you scroll · ultraviolet: night, hue turned to green by request
+ * hero: Stage · nav: edge-aligned, wordmark + links + resume pill · footer: a mast, name over the links · imagery: the owner's portrait, tinted violet · signature: a light canvas globe orbits the portrait, the figures count up and the experience spine draws as you scroll · ultraviolet: night, hue turned to green by request
  * axes: dark/geometric-sans/cool · posture: committed · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: E, motion is the brief so it is heavier than the theme's dry default; every move is transform or opacity, once, and reduced motion shows the finished state */
-/* Hallmark · waive 80 · the rings are three decorative arcs drawn once around the portrait, no illustration · the user asked for motion graphics */
+/* Hallmark · globe: a canvas 2D dot sphere with orbit rings, about 2 KB, no library, renders only while on screen */
 /* Hallmark · waive 49b · the contact links are long addresses that wrap only at a 320px phone width · wrapping a long address onto two lines beats a horizontal scroll on the smallest phones */
 @import url("./tokens.css");
 @import url("./base.css");
@@ -46,11 +46,8 @@ h1, h2, h3 { text-transform: lowercase; }
 .stage { position: relative; width: 100%; max-width: 440px; margin-inline: auto; perspective: 900px; }
 .portrait { aspect-ratio: 4 / 5; border-radius: var(--radius-card); transform-style: preserve-3d; transition: transform var(--dur-short) var(--ease-out); animation: fade-up var(--dur-long) var(--ease-out) 300ms both; }
 .portrait img { object-position: 50% 25%; }
-.rings { position: absolute; inset: -14% -16%; width: 132%; height: 128%; max-width: none; pointer-events: none; }
-.ring { fill: none; stroke: var(--color-accent); stroke-width: 1.5; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1800ms var(--ease-out) 500ms forwards; }
-.ring--2 { stroke: var(--color-rule-2); animation-delay: 800ms; }
-.ring--3 { stroke: var(--color-accent-soft); animation-delay: 1100ms; }
-@keyframes draw { to { stroke-dashoffset: 0; } }
+.globe { position: absolute; inset: -22% -26%; width: 152%; height: 144%; max-width: none; pointer-events: none; z-index: 0; animation: fade-up var(--dur-long) var(--ease-out) 400ms both; }
+.portrait { position: relative; z-index: var(--z-base); }
 .caption { position: relative; z-index: var(--z-raised); margin-top: var(--space-xl); text-align: center; font-family: var(--font-display); font-weight: 500; font-size: var(--text-sm); color: var(--color-muted); text-transform: lowercase; }
 @media (max-width: 60rem) { .hero .container { grid-template-columns: minmax(0, 1fr); min-height: 0; max-height: none; } .stage { max-width: 300px; order: -1; margin-inline: 0; } }
 
@@ -149,7 +146,6 @@ h1, h2, h3 { text-transform: lowercase; }
 
 @media (prefers-reduced-motion: reduce) {
   .js .reveal { opacity: 1; transform: none; }
-  .ring { stroke-dashoffset: 0; animation: none; }
   .track { animation: none; width: auto; flex-wrap: wrap; }
   .track [aria-hidden="true"], #pause { display: none; }
   .spine::before { animation: none; transform: none; }

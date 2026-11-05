@@ -24,7 +24,7 @@
 .hero .lead { color: var(--color-ink-2); margin-top: var(--space-lg); }
 .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
 .portrait { width: 100%; max-width: 460px; margin-inline: auto; aspect-ratio: 4 / 5; border-radius: var(--radius-card); border: var(--rule-hair) solid var(--color-rule); }
-.portrait img { object-position: 50% 30%; }
+.portrait img { object-position: 50% 25%; }
 .caption { max-width: 460px; margin-inline: auto; margin-top: var(--space-xs); font-size: var(--text-sm); color: var(--color-muted); font-weight: 500; }
 @media (max-width: 60rem) { .hero .container { grid-template-columns: minmax(0, 1fr); min-height: 0; max-height: none; gap: var(--space-xl); } .portrait { max-width: 280px; order: -1; aspect-ratio: 1; } }
 

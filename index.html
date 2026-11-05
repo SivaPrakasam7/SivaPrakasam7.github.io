@@ -1,18 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.dde35d00.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siva prakasam</title>
-  <script type="module" crossorigin src="/assets/index.989c56ce.js"></script>
-  <link rel="stylesheet" href="/assets/index.1d5077af.css">
+  <meta name="description" content="Sivaprakasam, web developer with 3 years in React, Vue, JavaScript and TypeScript." />
+  <link rel="icon" type="image/png" href="assets/favicon.dde35d00.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div id="root"></div>
-  
-</body>
+  <header class="nav">
+    <div class="container">
+      <a class="wordmark" href="#top">Sivaprakasam</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--primary" href="assets/sivaprakasam.d50eeb03.pdf" download>Get Resume</a>
+      </nav>
+    </div>
+  </header>
 
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div>
+          <h1>Hi, I’m Sivaprakasam</h1>
+          <p class="lead">Web developer with 3 years in React, Vue and TypeScript.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="mailto:prakasams22@gmail.com">Mail</a>
+            <a class="btn" href="https://github.com/SivaPrakasam7" target="_blank" rel="noopener">Github</a>
+            <a class="btn" href="https://linkedin.com/in/siva-prakasam" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://tryhackme.com/p/SivaPrakasam" target="_blank" rel="noopener">TryHackMe</a>
+          </div>
+        </div>
+        <figure style="margin:0">
+          <div class="portrait" data-slot="portrait" data-alt="Sivaprakasam">
+            <img src="assets/old_me.851b15af.jpg" alt="Portrait of Sivaprakasam" width="2346" height="2501" />
+          </div>
+          <figcaption class="caption">Web Developer</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="band band--deep" id="projects">
+      <div class="container">
+        <div class="sec-head">
+          <h2>Projects</h2>
+          <p>Seven projects, newest first. Source on GitHub, live links where they still run.</p>
+        </div>
+        <ol class="trail">
+          <li class="entry">
+            <span class="measured when">2024</span>
+            <div><h3>Fullstack setup</h3><p>Ready-to-use bash scripts for setup, database management and testing. On an unsupported OS, run the commands by hand from the script files.</p><span class="measured stack">Vue, Vite, Tailwind, Typescript, Cypress, Lerna, Git actions</span></div>
+            <div class="links"><a href="https://github.com/SivaPrakasam7/DemoCrypto" target="_blank" rel="noopener">github</a><a href="https://democrypto-7f0f3.web.app" target="_blank" rel="noopener">View</a></div>
+          </li>
+          <li class="entry">
+            <span class="measured when">2022</span>
+            <div><h3>Demo Crypto</h3><p>Crypto trade practice platform. Different crypto trading logics with Coinbase realtime data from a websocket.</p><span class="measured stack">ReactTS, Vite, Mui V5, Firebase</span></div>
+            <div class="links"><a href="https://github.com/SivaPrakasam7/DemoCrypto" target="_blank" rel="noopener">github</a><a href="https://democrypto-7f0f3.web.app" target="_blank" rel="noopener">View</a></div>
+          </li>
+          <li class="entry">
+            <span class="measured when">2021</span>
+            <div><h3>Book Donation</h3><p>React app to encourage people to donate books, with a views and hooks based structure.</p><span class="measured stack">ReactTS, Vite, Mui V5, Unit Test with Jest</span></div>
+            <div class="links"><a href="https://github.com/CSEKINGS/book-donation-react-ts-web" target="_blank" rel="noopener">github</a><a href="https://bookd-web.herokuapp.com" target="_blank" rel="noopener">View</a></div>
+          </li>
+          <li class="entry">
+            <span class="measured when">2021</span>
+            <div><h3>Book Donation Backend</h3><p>E-commerce logic and socket connection for user chat in the Book Donation frontend.</p><span class="measured stack">NodeJS, Express, Websocket, MongoDB</span></div>
+            <div class="links"><a href="https://github.com/CSEKINGS/book_donation_backend" target="_blank" rel="noopener">github</a><a href="https://book-donation-api.herokuapp.com" target="_blank" rel="noopener">View</a></div>
+          </li>
+          <li class="entry">
+            <span class="measured when">2021</span>
+            <div><h3>SociaLod MERN Stack</h3><p>Search by user name across publicly available social media information, building a human information resource with recursive search. Clean architecture throughout.</p><span class="measured stack">MERN Stack, Mui V4</span></div>
+            <div class="links"><a href="https://github.com/SivaPrakasam7/SociaLod_MERNStack" target="_blank" rel="noopener">github</a><a href="https://socialod.herokuapp.com" target="_blank" rel="noopener">View</a></div>
+          </li>
+          <li class="entry">
+            <span class="measured when">2020</span>
+            <div><h3>AUFlix</h3><p>Free study material collected across the web, in one simple website.</p><span class="measured stack">Python, Firebase, Web Scraping</span></div>
+            <div class="links"><a href="https://github.com/CSEKINGS/AUFlix" target="_blank" rel="noopener">github</a><span class="off">Maintanace</span></div>
+          </li>
+          <li class="entry">
+            <span class="measured when">now</span>
+            <div><h3>More</h3><p>The rest is on my GitHub profile. I also learn new concepts through TryHackMe.</p><span class="measured stack">Selenium, Shell script, SQL, PHP, Server handling, SSH service</span></div>
+            <div class="links"><a href="https://github.com/sivaprakasam7" target="_blank" rel="noopener">github</a><a href="https://tryhackme.com/p/SivaPrakasam" target="_blank" rel="noopener">Tryhackme</a></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band" id="experience">
+      <div class="container">
+        <div class="sec-head">
+          <h2>Experience</h2>
+          <p>Learning new JS methods and coding architecture while working with a team.</p>
+        </div>
+        <div class="reading-panel">
+          <div class="reading">Aug 2021 to Present</div>
+          <dl>
+            <dt>Position</dt><dd>React Developer</dd>
+            <dt>Company</dt><dd class="who">Pyramidions solutions</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--deep" id="services">
+      <div class="container">
+        <div class="sec-head">
+          <h2>Services</h2>
+          <p>Three ways to work together.</p>
+        </div>
+        <div class="panels">
+          <article>
+            <h3>Contribution</h3>
+            <p>I’m interested to learn new things by collaborating on other people’s projects.</p>
+            <p>Feel free to ping me with interesting project ideas or concepts.</p>
+          </article>
+          <article>
+            <h3>Hire me</h3>
+            <p>I provide my best with your team.</p>
+            <p>You can also verify my resume. Let me help you.</p>
+          </article>
+          <article>
+            <h3>Web development</h3>
+            <p>Already chosen a theme? Send it to me. If not, no problem, we’ll discuss your thoughts.</p>
+            <p>I can help with portfolios and other web apps based on your requirements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="contact">
+      <div class="container contact">
+        <div>
+          <h2>Let’s work together</h2>
+          <div class="actions">
+            <a class="btn btn--primary" href="mailto:prakasams22@gmail.com">Mail</a>
+            <a class="btn" href="assets/sivaprakasam.d50eeb03.pdf" download>Get Resume</a>
+            <a class="btn" href="https://wa.me/916382657699" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <ul class="contact-list">
+          <li><span>Email</span><a class="measured" href="mailto:prakasams22@gmail.com">prakasams22@gmail.com</a></li>
+          <li><span>Phone</span><a class="measured" href="tel:+916382657699">+91 6382657699</a></li>
+          <li><span>Github</span><a class="measured" href="https://github.com/SivaPrakasam7" target="_blank" rel="noopener">github.com/SivaPrakasam7</a></li>
+          <li><span>LinkedIn</span><a class="measured" href="https://www.linkedin.com/in/siva-prakasam" target="_blank" rel="noopener">linkedin.com/in/siva-prakasam</a></li>
+          <li><span>TryHackMe</span><a class="measured" href="https://tryhackme.com/p/SivaPrakasam" target="_blank" rel="noopener">tryhackme.com/p/SivaPrakasam</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="container"><span>Sivaprakasam@2022</span><span>Web Developer</span></div>
+  </footer>
+</body>
 </html>

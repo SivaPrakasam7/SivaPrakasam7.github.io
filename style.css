@@ -66,7 +66,7 @@ h1, h2, h3 { text-transform: lowercase; }
 @media (max-width: 60rem) { .sec-head { grid-template-columns: minmax(0, 1fr); gap: var(--space-md); } }
 
 /* figures */
-.figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: var(--rule-hair) solid var(--color-rule); }
+.figures { display: grid; grid-template-columns: minmax(0, 1fr); border-top: var(--rule-hair) solid var(--color-rule); }
 .figures > div { padding-block: var(--space-xl); padding-right: var(--space-lg); }
 .figures > div + div { border-left: var(--rule-hair) solid var(--color-rule); padding-left: var(--space-xl); }
 .figure { font-family: var(--font-display); font-weight: 300; font-size: var(--text-display); line-height: 0.9; font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-display); }
@@ -94,9 +94,13 @@ h1, h2, h3 { text-transform: lowercase; }
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-md); }
 .card { color: var(--color-ink); background: var(--color-paper-3); border-radius: var(--radius-card); padding: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-sm); transition: transform var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out); }
 .card:hover { transform: translateY(-6px); background: var(--color-accent-soft); }
+.cards--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.card .yr { font-family: var(--font-display); font-weight: 500; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.card .links { display: flex; gap: var(--space-md); margin-top: auto; padding-top: var(--space-sm); font-size: var(--text-sm); }
+.card .links a:hover { color: var(--color-accent); }
 .card h3 { font-size: var(--text-xl); }
 .card p { color: var(--color-ink-2); }
-@media (max-width: 60rem) { .cards { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 60rem) { .cards, .cards--two { grid-template-columns: minmax(0, 1fr); } }
 
 .repos { list-style: none; margin: var(--space-xl) 0 0; padding: 0; border-top: var(--rule-hair) solid var(--color-rule-2); }
 .repo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 5fr) minmax(0, 2fr); gap: var(--space-lg); align-items: baseline; padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); transition: background-color var(--dur-short) var(--ease-out); }

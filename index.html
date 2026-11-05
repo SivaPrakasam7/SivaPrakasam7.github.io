@@ -4,23 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siva prakasam</title>
-  <meta name="description" content="Sivaprakasam, web developer with 3 years in React, Vue, JavaScript and TypeScript." />
+  <meta name="description" content="Siva Prakasam Ganesan, full-stack software engineer building production web apps with React, Node.js and MySQL." />
   <link rel="icon" type="image/png" href="assets/favicon.dde35d00.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&family=Onest:wght@400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <div class="progress" aria-hidden="true"></div>
   <header class="nav">
     <div class="container">
-      <a class="wordmark" href="#top">Sivaprakasam</a>
+      <a class="wordmark" href="#top">siva prakasam</a>
       <nav class="nav-links" aria-label="Main">
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn--primary" href="assets/sivaprakasam.d50eeb03.pdf" download>Get Resume</a>
+        <a href="#experience">experience</a>
+        <a href="#work">work</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+        <a class="btn btn--primary" href="assets/sivaprakasam.d50eeb03.pdf" download>get resume</a>
       </nav>
     </div>
   </header>
@@ -29,135 +31,134 @@
     <section class="hero">
       <div class="container">
         <div>
-          <h1>Hi, I’m Sivaprakasam</h1>
-          <p class="lead">Web developer with 3 years in React, Vue and TypeScript.</p>
+          <h1><span class="line"><span>siva</span></span><span class="line"><span>prakasam</span></span><span class="line"><span>ganesan</span></span></h1>
+          <p class="lead">Full-stack engineer shipping production web apps in React and Node.js.</p>
           <div class="actions">
-            <a class="btn btn--primary" href="mailto:prakasams22@gmail.com">Mail</a>
-            <a class="btn" href="https://github.com/SivaPrakasam7" target="_blank" rel="noopener">Github</a>
-            <a class="btn" href="https://linkedin.com/in/siva-prakasam" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="https://tryhackme.com/p/SivaPrakasam" target="_blank" rel="noopener">TryHackMe</a>
+            <a class="btn btn--primary" href="mailto:sivaprakasam.ganesan@gmail.com">mail me</a>
+            <a class="btn btn--secondary" href="https://github.com/SivaPrakasam7" target="_blank" rel="noopener">github</a>
+            <a class="btn btn--secondary" href="https://linkedin.com/in/siva-prakasam" target="_blank" rel="noopener">linkedin</a>
           </div>
         </div>
-        <figure style="margin:0">
-          <div class="portrait" data-slot="portrait" data-alt="Sivaprakasam">
-            <img src="assets/profile.jpg" alt="Portrait of Sivaprakasam" width="1096" height="1600" />
+        <figure class="stage" style="margin:0">
+          <svg class="rings" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="ring" cx="50" cy="50" r="46" pathLength="1" />
+            <circle class="ring ring--2" cx="50" cy="50" r="49" pathLength="1" />
+            <circle class="ring ring--3" cx="50" cy="50" r="43" pathLength="1" />
+          </svg>
+          <div class="portrait" data-slot="portrait" data-alt="Siva Prakasam Ganesan">
+            <img src="assets/profile.jpg" alt="Portrait of Siva Prakasam Ganesan" width="1096" height="1600" />
           </div>
-          <figcaption class="caption">Web Developer</figcaption>
+          <figcaption class="caption">full-stack software engineer</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="band band--deep" id="projects">
-      <div class="container">
-        <div class="sec-head">
-          <h2>Projects</h2>
-          <p>Seven projects, newest first. Source on GitHub, live links where they still run.</p>
+    <section class="marquee-band" aria-label="Technical skills">
+      <div class="container marquee-bar">
+        <div class="marquee">
+          <div class="track" id="track">
+            <span>react 18</span><span>typescript</span><span>vite</span><span>node.js</span><span>express</span><span>prisma orm</span><span>mysql</span><span>tailwind css</span><span>rest api design</span><span>jwt auth</span><span>jest</span><span>playwright</span><span>git</span><span>docker</span><span>pm2</span><span>capacitor</span>
+            <span aria-hidden="true">react 18</span><span aria-hidden="true">typescript</span><span aria-hidden="true">vite</span><span aria-hidden="true">node.js</span><span aria-hidden="true">express</span><span aria-hidden="true">prisma orm</span><span aria-hidden="true">mysql</span><span aria-hidden="true">tailwind css</span><span aria-hidden="true">rest api design</span><span aria-hidden="true">jwt auth</span><span aria-hidden="true">jest</span><span aria-hidden="true">playwright</span><span aria-hidden="true">git</span><span aria-hidden="true">docker</span><span aria-hidden="true">pm2</span><span aria-hidden="true">capacitor</span>
+          </div>
         </div>
-        <ol class="trail">
-          <li class="entry">
-            <span class="measured when">2024</span>
-            <div><h3>Fullstack setup</h3><p>Ready-to-use bash scripts for setup, database management and testing. On an unsupported OS, run the commands by hand from the script files.</p><span class="measured stack">Vue, Vite, Tailwind, Typescript, Cypress, Lerna, Git actions</span></div>
-            <div class="links"><a href="https://github.com/SivaPrakasam7/DemoCrypto" target="_blank" rel="noopener">github</a><a href="https://democrypto-7f0f3.web.app" target="_blank" rel="noopener">View</a></div>
-          </li>
-          <li class="entry">
-            <span class="measured when">2022</span>
-            <div><h3>Demo Crypto</h3><p>Crypto trade practice platform. Different crypto trading logics with Coinbase realtime data from a websocket.</p><span class="measured stack">ReactTS, Vite, Mui V5, Firebase</span></div>
-            <div class="links"><a href="https://github.com/SivaPrakasam7/DemoCrypto" target="_blank" rel="noopener">github</a><a href="https://democrypto-7f0f3.web.app" target="_blank" rel="noopener">View</a></div>
-          </li>
-          <li class="entry">
-            <span class="measured when">2021</span>
-            <div><h3>Book Donation</h3><p>React app to encourage people to donate books, with a views and hooks based structure.</p><span class="measured stack">ReactTS, Vite, Mui V5, Unit Test with Jest</span></div>
-            <div class="links"><a href="https://github.com/CSEKINGS/book-donation-react-ts-web" target="_blank" rel="noopener">github</a><a href="https://bookd-web.herokuapp.com" target="_blank" rel="noopener">View</a></div>
-          </li>
-          <li class="entry">
-            <span class="measured when">2021</span>
-            <div><h3>Book Donation Backend</h3><p>E-commerce logic and socket connection for user chat in the Book Donation frontend.</p><span class="measured stack">NodeJS, Express, Websocket, MongoDB</span></div>
-            <div class="links"><a href="https://github.com/CSEKINGS/book_donation_backend" target="_blank" rel="noopener">github</a><a href="https://book-donation-api.herokuapp.com" target="_blank" rel="noopener">View</a></div>
-          </li>
-          <li class="entry">
-            <span class="measured when">2021</span>
-            <div><h3>SociaLod MERN Stack</h3><p>Search by user name across publicly available social media information, building a human information resource with recursive search. Clean architecture throughout.</p><span class="measured stack">MERN Stack, Mui V4</span></div>
-            <div class="links"><a href="https://github.com/SivaPrakasam7/SociaLod_MERNStack" target="_blank" rel="noopener">github</a><a href="https://socialod.herokuapp.com" target="_blank" rel="noopener">View</a></div>
-          </li>
-          <li class="entry">
-            <span class="measured when">2020</span>
-            <div><h3>AUFlix</h3><p>Free study material collected across the web, in one simple website.</p><span class="measured stack">Python, Firebase, Web Scraping</span></div>
-            <div class="links"><a href="https://github.com/CSEKINGS/AUFlix" target="_blank" rel="noopener">github</a><span class="off">Maintanace</span></div>
-          </li>
-          <li class="entry">
-            <span class="measured when">now</span>
-            <div><h3>More</h3><p>The rest is on my GitHub profile. I also learn new concepts through TryHackMe.</p><span class="measured stack">Selenium, Shell script, SQL, PHP, Server handling, SSH service</span></div>
-            <div class="links"><a href="https://github.com/sivaprakasam7" target="_blank" rel="noopener">github</a><a href="https://tryhackme.com/p/SivaPrakasam" target="_blank" rel="noopener">Tryhackme</a></div>
-          </li>
-        </ol>
+        <button class="pill" id="pause" type="button" aria-pressed="false" aria-controls="track">pause</button>
       </div>
     </section>
 
     <section class="band" id="experience">
       <div class="container">
-        <div class="sec-head">
-          <h2>Experience</h2>
-          <p>Learning new JS methods and coding architecture while working with a team.</p>
+        <div class="figures reveal">
+          <div><div class="figure"><span data-count="4">4</span><small>+ years</small></div><p>building and shipping production web applications.</p></div>
+          <div><div class="figure hot">~<span data-count="30">30</span><small>%</small></div><p>faster new-module delivery from the REST module conventions I designed.</p></div>
         </div>
-        <div class="reading-panel">
-          <div class="reading">Aug 2021 to Present</div>
-          <dl>
-            <dt>Position</dt><dd>React Developer</dd>
-            <dt>Company</dt><dd class="who">Pyramidions solutions</dd>
-          </dl>
+        <div class="exp" style="margin-top: var(--section-gap-s)">
+          <div class="exp-meta reveal">
+            <h2>software engineer</h2>
+            <div class="when">nov 2021 to present</div>
+            <p>Pyramidion Solutions Private Limited, Chennai</p>
+          </div>
+          <ul class="spine">
+            <li class="reveal">Build and maintain customer-facing and admin web applications on a React / Express / Prisma / MySQL monorepo.</li>
+            <li class="reveal">Designed REST modules with role-based access, validation and soft-delete conventions.</li>
+            <li class="reveal">Integrated third-party services including payments, e-KYC / document verification APIs and real-time messaging.</li>
+            <li class="reveal">Wrote Jest integration tests and Playwright end-to-end specs; improved release stability across sprints.</li>
+            <li class="reveal">Optimised slow listing endpoints with indexing and pagination.</li>
+            <li class="reveal">Mentored interns and reviewed pull requests for the team.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="band band--deep" id="services">
+    <section class="band work" id="work">
       <div class="container">
-        <div class="sec-head">
-          <h2>Services</h2>
-          <p>Three ways to work together.</p>
+        <div class="sec-head reveal"><h2>selected work</h2><p>Production projects from my role, then the open source I keep on GitHub.</p></div>
+        <div class="cards">
+          <article class="card reveal"><h3>background-verification platform</h3><p>Case management and verification workflow covering identity, address, education and employment checks, with PDF report generation and admin review queues.</p></article>
+          <article class="card reveal"><h3>real-time chat module</h3><p>End-to-end encrypted messaging with WebSocket delivery, file attachments and read receipts.</p></article>
+          <article class="card reveal"><h3>mobile wrapper app</h3><p>Packaged the web client for Android/iOS using Capacitor with push notifications and PWA support.</p></article>
         </div>
-        <div class="panels">
-          <article>
-            <h3>Contribution</h3>
-            <p>I’m interested to learn new things by collaborating on other people’s projects.</p>
-            <p>Feel free to ping me with interesting project ideas or concepts.</p>
-          </article>
-          <article>
-            <h3>Hire me</h3>
-            <p>I provide my best with your team.</p>
-            <p>You can also verify my resume. Let me help you.</p>
-          </article>
-          <article>
-            <h3>Web development</h3>
-            <p>Already chosen a theme? Send it to me. If not, no problem, we’ll discuss your thoughts.</p>
-            <p>I can help with portfolios and other web apps based on your requirements.</p>
-          </article>
+
+        <h2 class="subhead reveal">open source</h2>
+        <ol class="repos">
+          <li class="repo reveal"><span class="yr">2024</span><h3>fullstack setup</h3><span class="stack">Vue, Vite, Tailwind, Typescript, Cypress, Lerna, Git actions</span><span class="links"><a href="https://github.com/SivaPrakasam7/DemoCrypto" target="_blank" rel="noopener">github</a><a href="https://democrypto-7f0f3.web.app" target="_blank" rel="noopener">view</a></span></li>
+          <li class="repo reveal"><span class="yr">2022</span><h3>demo crypto</h3><span class="stack">ReactTS, Vite, Mui V5, Firebase. Crypto trade practice with Coinbase realtime data.</span><span class="links"><a href="https://github.com/SivaPrakasam7/DemoCrypto" target="_blank" rel="noopener">github</a><a href="https://democrypto-7f0f3.web.app" target="_blank" rel="noopener">view</a></span></li>
+          <li class="repo reveal"><span class="yr">2021</span><h3>book donation</h3><span class="stack">ReactTS, Vite, Mui V5, Jest. Donate books, views and hooks structure.</span><span class="links"><a href="https://github.com/CSEKINGS/book-donation-react-ts-web" target="_blank" rel="noopener">github</a><a href="https://bookd-web.herokuapp.com" target="_blank" rel="noopener">view</a></span></li>
+          <li class="repo reveal"><span class="yr">2021</span><h3>book donation backend</h3><span class="stack">NodeJS, Express, Websocket, MongoDB. E-commerce logic and user chat.</span><span class="links"><a href="https://github.com/CSEKINGS/book_donation_backend" target="_blank" rel="noopener">github</a><a href="https://book-donation-api.herokuapp.com" target="_blank" rel="noopener">view</a></span></li>
+          <li class="repo reveal"><span class="yr">2021</span><h3>socialod mern stack</h3><span class="stack">MERN Stack, Mui V4. Recursive search of public social profiles.</span><span class="links"><a href="https://github.com/SivaPrakasam7/SociaLod_MERNStack" target="_blank" rel="noopener">github</a><a href="https://socialod.herokuapp.com" target="_blank" rel="noopener">view</a></span></li>
+          <li class="repo reveal"><span class="yr">2020</span><h3>auflix</h3><span class="stack">Python, Firebase, Web Scraping. Free study material in one site.</span><span class="links"><a href="https://github.com/CSEKINGS/AUFlix" target="_blank" rel="noopener">github</a><span class="off">maintenance</span></span></li>
+          <li class="repo reveal"><span class="yr">now</span><h3>more</h3><span class="stack">Selenium, Shell script, SQL, PHP, Server handling, SSH service</span><span class="links"><a href="https://github.com/sivaprakasam7" target="_blank" rel="noopener">github</a><a href="https://tryhackme.com/p/SivaPrakasam" target="_blank" rel="noopener">tryhackme</a></span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band" id="skills">
+      <div class="container two">
+        <div class="reveal">
+          <h2>education</h2>
+          <p><strong>B.E. Computer Science and Engineering</strong>, 2017 to 2021</p>
+          <p class="meta">Arasu Engineering College, Kumbakonam (Anna University, Chennai). Graduated 2021 with First Class. Final-year project: online complaint management system (React, Node.js, MySQL).</p>
+        </div>
+        <div class="reveal">
+          <h2>certifications</h2>
+          <div class="pills"><span class="pill">Meta Front-End Developer Professional Certificate, Coursera</span><span class="pill">Node.js Application Development, NPTEL</span></div>
         </div>
       </div>
     </section>
 
-    <section class="band" id="contact">
-      <div class="container contact">
-        <div>
-          <h2>Let’s work together</h2>
+    <section class="record" id="contact">
+      <div class="container">
+        <div class="reveal">
+          <h2>let’s build it</h2>
           <div class="actions">
-            <a class="btn btn--primary" href="mailto:prakasams22@gmail.com">Mail</a>
-            <a class="btn" href="assets/sivaprakasam.d50eeb03.pdf" download>Get Resume</a>
-            <a class="btn" href="https://wa.me/916382657699" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn--primary" href="mailto:sivaprakasam.ganesan@gmail.com">mail me</a>
+            <a class="btn btn--secondary" href="assets/sivaprakasam.d50eeb03.pdf" download>get resume</a>
+            <a class="btn btn--secondary" href="https://wa.me/916382657699" target="_blank" rel="noopener">whatsapp</a>
           </div>
         </div>
-        <ul class="contact-list">
-          <li><span>Email</span><a class="measured" href="mailto:prakasams22@gmail.com">prakasams22@gmail.com</a></li>
-          <li><span>Phone</span><a class="measured" href="tel:+916382657699">+91 6382657699</a></li>
-          <li><span>Github</span><a class="measured" href="https://github.com/SivaPrakasam7" target="_blank" rel="noopener">github.com/SivaPrakasam7</a></li>
-          <li><span>LinkedIn</span><a class="measured" href="https://www.linkedin.com/in/siva-prakasam" target="_blank" rel="noopener">linkedin.com/in/siva-prakasam</a></li>
-          <li><span>TryHackMe</span><a class="measured" href="https://tryhackme.com/p/SivaPrakasam" target="_blank" rel="noopener">tryhackme.com/p/SivaPrakasam</a></li>
+        <ul class="contact-list reveal">
+          <li><span>email</span><a href="mailto:sivaprakasam.ganesan@gmail.com">sivaprakasam.ganesan@gmail.com</a></li>
+          <li><span>phone</span><a href="tel:+916382657699">+91 63826 57699</a></li>
+          <li><span>github</span><a href="https://github.com/SivaPrakasam7" target="_blank" rel="noopener">github.com/SivaPrakasam7</a></li>
+          <li><span>linkedin</span><a href="https://www.linkedin.com/in/siva-prakasam" target="_blank" rel="noopener">linkedin.com/in/siva-prakasam</a></li>
+          <li><span>tryhackme</span><a href="https://tryhackme.com/p/SivaPrakasam" target="_blank" rel="noopener">tryhackme.com/p/SivaPrakasam</a></li>
         </ul>
       </div>
     </section>
   </main>
 
-  <footer class="foot">
-    <div class="container"><span>Sivaprakasam@2022</span><span>Web Developer</span></div>
-  </footer>
+  <footer class="foot"><div class="container"><span>Sivaprakasam@2022</span><span>Languages: Tamil, English</span></div></footer>
+
+  <script src="app.js"></script>
+  <script>
+    (function () {
+      var b = document.getElementById('pause'), t = document.getElementById('track');
+      b.addEventListener('click', function () {
+        var p = b.getAttribute('aria-pressed') === 'true';
+        b.setAttribute('aria-pressed', String(!p));
+        b.textContent = p ? 'pause' : 'play';
+        t.dataset.paused = String(!p);
+      });
+    })();
+  </script>
 </body>
 </html>
